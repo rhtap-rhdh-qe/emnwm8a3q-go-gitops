@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: emnwm8a3q-go
+  janus-idp.io/tekton: emnwm8a3q-go
+  backstage.io/kubernetes-id: emnwm8a3q-go
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: emnwm8a3q-go
+resources:
+  - deployment.yaml
+  - route.yaml
+  - service.yaml
